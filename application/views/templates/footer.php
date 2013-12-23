@@ -1,6 +1,3 @@
-        <footer>
-            oli
-        </footer>
-        </html>        
+        En el footer :D
     </body>
 </html>

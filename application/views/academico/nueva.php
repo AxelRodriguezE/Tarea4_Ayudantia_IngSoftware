@@ -1,15 +1,16 @@
-	<div class="row">
-		<div class="large-12 columns">
-			<form action="<?php echo base_url(); ?>academico/agregar" method="post">
-				<div class="row">
-					<div class="four columns">
-						<label>Nombre</label>
-						<input name="nombre_academico" type="text" />
-						<label>RUT</label>
-						<input name="rut_academico" type="text" />
-						<input type="submit" class="button" value="Agregar">
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
+esto es para agregar un nuevo academico (entro a nueva.php)
+
+<div class="container">
+    <form action="<?php echo base_url(); ?>index.php/academico/agregar" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">RUT</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <input type="submit" class="button" value="Agregar">
+    </form> 
+</div>
+

@@ -1,7 +1,8 @@
-	<div class="row">
-		<div class="large-12 columns">
-			<table>
-				<thead>
+<h1>Hello, world!</h1>
+
+<div class="container">
+    <table>
+	<thead>
 					<tr>
 						<th>#</th>
 						<th>Nombre</th>
@@ -16,11 +17,17 @@
 						<td><?php echo $query->id_academico; ?>
 						<td><?php echo $query->nombre_academico; ?></td>
 						<td><?php echo $query->rut_academico; ?></td>
-						<td><a class="button tiny round" href="<?php echo base_url(); ?>academico/editar/<?php echo $query->id_academico; ?>">Modificar</a></td>
-						<td><a class="button tiny round alert" href="<?php echo base_url(); ?>academico/eliminar/<?php echo $query->id_academico; ?>">Eliminar</a></td>
+                                                <button type="button" href="<?php echo base_url(); ?>index.php/academico/editar<?php echo $query->id_academico; ?>" class="btn btn-primary">Modificar</button>
+                                                <button type="button" href="<?php echo base_url(); ?>index.php/academico/eliminar<?php echo $query->id_academico; ?>" class="btn btn-primary">Eliminar</button>						
 					</tr>
 					<?php endforeach;?>
 				</tbody>
-			</table>
-		</div>
-	</div>
+			</table>    
+</div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>

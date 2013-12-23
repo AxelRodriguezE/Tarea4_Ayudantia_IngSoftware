@@ -1,7 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class academico extends CI_Controller {
-	public function index()
+
+        public function index()
 	{
 		$data['title'] = 'Index';
 		$this->load->model('academico_model');
@@ -15,12 +16,12 @@ class academico extends CI_Controller {
 	{
 		if($this->input->post())
 		{
-			$this->load->model('Tesis_Model');
+			$this->load->model('academico_model');
 			$academico = array(
 					'nombre_academico' => $this->input->post('nombre_academico', true),
 					'rut_academico' => $this->input->post('rut_academico', true),
 			);
-			if($this->Tesis_Model->insertar($academico))
+			if($this->academico_model->insertar($academico))
 				redirect('academico');
 		}
 		else
@@ -88,7 +89,7 @@ class academico extends CI_Controller {
 	    $this->load->model('academico_model');
             if($this->academico_model->getAcademico($id) )
             {
-                 $tesis = array(
+                 $academico = array(
                                         'nombre_academico' => $this->input->post('nombre_academico', true),
                                         'rut_academico' => $this->input->post('rut_academico', true),
                         );
